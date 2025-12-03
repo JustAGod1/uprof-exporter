@@ -4,6 +4,8 @@ services:
     restart: unless-stopped
     container_name: uprof-exporter
     privileged: true
+    environment:
+      - HOST_HOSTNAME=${HOSTNAME}
     ports:
       - "7804:9100"
     volumes:
