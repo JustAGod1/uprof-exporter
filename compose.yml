@@ -1,6 +1,7 @@
 services:
   uprof-exporter:
     image: justagod/amd-uprof-exporter
+    restart: unless-stopped
     container_name: uprof-exporter
     privileged: true
     stdin_open: true
