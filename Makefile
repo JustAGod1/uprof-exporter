@@ -3,7 +3,7 @@
 REGISTRY := registry.justalan.ru
 IMAGE_NAME := amd-uprof-exporter
 TAG := latest
-FULL_IMAGE := $(REGISTRY)/$(IMAGE_NAME):$(TAG)
+FULL_IMAGE := justagod/$(IMAGE_NAME):$(TAG)
 
 help:
 	@echo "Available targets:"

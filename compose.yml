@@ -1,6 +1,6 @@
 services:
   uprof-exporter:
-    image: registry.justalan.ru/amd-uprof-exporter
+    image: justagod/amd-uprof-exporter
     container_name: uprof-exporter
     privileged: true
     stdin_open: true
