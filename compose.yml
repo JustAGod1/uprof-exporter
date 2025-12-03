@@ -4,7 +4,6 @@ services:
     restart: unless-stopped
     container_name: uprof-exporter
     privileged: true
-    stdin_open: true
     ports:
       - "7804:9100"
     volumes:
