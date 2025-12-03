@@ -1,0 +1,5 @@
+*
+!src/
+!Cargo.toml
+!Cargo.lock
+!amduprof_5.1-701_amd64.deb
