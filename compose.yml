@@ -1,0 +1,11 @@
+services:
+  uprof-exporter:
+    image: registry.justalan.ru/amd-uprof-exporter
+    container_name: uprof-exporter
+    privileged: true
+    stdin_open: true
+    ports:
+      - "7804:9100"
+    volumes:
+      - "/dev/cpu:/dev/cpu:ro"
+      - "./data:/var/uprof"
