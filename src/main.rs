@@ -117,14 +117,15 @@ impl Metrics {
 }
 
 async fn collect_metrics() -> Result<UProfMetrics, Box<dyn std::error::Error>> {
-    let output_path = "/tmp/uprof_metrics.csv";
+    let output_path = "/var/uprof/uprof_metrics.csv";
 
     // Запускаем AMDuProfPcm
     let output = Command::new("/opt/AMDuProf_Linux_x64_5.1.701/bin/AMDuProfPcm")
         .args(&[
             "-m", "memory,l1,l2,l3",
             "-a",
-            "-d", "5",
+            "-d", "1",
+            "-r",
             "-o", output_path,
             "--msr"
         ])

@@ -23,6 +23,8 @@ RUN wget 'https://nc.justalan.ru/public.php/dav/files/cKEJDoxC6WWRX4c/?accept=zi
     tar -xjf /tmp/AMDuProf_Linux_x64_5.1.701.tar.bz2 -C /opt/ && \
     rm /tmp/AMDuProf_Linux_x64_5.1.701.tar.bz2
 
+RUN mkdir -p /var/uprof
+
 # Copy binary from builder
 COPY --from=builder /build/target/release/uprof-exporter /usr/local/bin/
 
